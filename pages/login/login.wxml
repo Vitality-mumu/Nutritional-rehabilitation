@@ -1,0 +1,41 @@
+<view class="container">
+  <!-- 导航栏 -->
+  <nav-bar show-back="{{backstatus}}" page-name="{{title}}" back-location="{{backLocation}}"></nav-bar>
+  <view class="home-content" style="padding-top:{{ navBarHeight }}px">
+    <view class="logo">
+      <image class="logo-byjk" src="https://bayajk.com/assets/img/wb-nutrition-logo.png?v=0.3"></image>
+      <view>万贝营养</view>
+    </view>
+    <view class="login-content">
+      <van-cell-group>
+        <view class="login-item">
+          <van-field value="{{ name }}" placeholder-style="color:{{commonColor1}}" border="{{ false }}"
+            placeholder="{{MSG1}}"  error-message="{{ERROR1}}" bind:input="onInputClick1"
+            input-class="input-class"
+          />
+        </view>
+        <view class="login-item">
+          <van-field value="{{ idCard }}" placeholder-style="color:{{commonColor2}}" border="{{ false }}"
+            placeholder="{{MSG2}}"  error-message="{{ERROR2}}" bind:input="onInputClick2"
+            input-class="input-class" maxlength="{{18}}"
+          />
+        </view>
+        <view class="privacy-file">
+          <view class="privacy {{privacyChecked ? 'privacy-checked' : ''}}" bindtap="togglePrivacyCheck"><view class="icon"></view></view>
+          我已阅读并同意
+          <navigator url="/pages/webview/index?navBgColor=#131934&navColor=#ffffff&src=https://bayajk.com/index/index/bayaconsent" >《服务协议》</navigator>
+          与
+          <navigator url="/pages/webview/index?navBgColor=#131934&navColor=#ffffff&src=https://bayajk.com/index/index/bayapolicy">《隐私政策》</navigator>
+        </view>
+        <!-- 提交 -->
+        <view  wx:if="{{name.length!=0 && idCard.length!=0 && ERROR1==''&& ERROR2=='' && privacyChecked}}" >
+          <button open-type="getPhoneNumber" style="background-color:rgba(0,0,0,0)" bindgetphonenumber="onPostClick" class="btn"></button>
+          <view class="btn">登 录</view>
+        </view>
+        <view  wx:if="{{ name=='' || idCard=='' || ERROR1!='' ||ERROR2!=''||!privacyChecked }}" >
+          <view class="btn btn-disable">登 录</view>
+        </view>
+      </van-cell-group>
+    </view>
+  </view>
+</view>

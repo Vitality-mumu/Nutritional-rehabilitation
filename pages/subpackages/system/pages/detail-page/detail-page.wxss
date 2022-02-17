@@ -1,0 +1,116 @@
+page {
+    height: 100%;
+}
+
+.details {
+    height: 100%;
+}
+
+.head {
+    height: 334rpx;
+    width: 100%;
+    display: flex;
+
+
+}
+
+/* 食材页头部 */
+.head-left {
+    width: 284rpx;
+    margin-left: 84rpx;
+    margin-top: 38rpx;
+
+}
+.txt1 {
+    line-height: 50rpx;
+    font-size: 21px;
+    font-family: SourceHanSansCN-Bold-GBpc-EUC-H;
+    color: #CDB2F9;
+}
+.txt2 {
+    margin-top: 24rpx;
+    font-size: 10px;
+    font-family: SourceHanSansCN-Light-GBpc-EUC-H;
+    line-height: 48rpx;
+    color: #F7002F;
+}
+.head-right {
+    margin-left: 30rpx;
+    width: 332rpx;
+    height: 240rpx;
+}
+/* 维生素页头部 */
+.txt3 {
+    margin-left: 70rpx;
+    width: 455rpx;
+    height: 92rpx;
+    font-size: 21px;
+    font-family: SourceHanSansCN-Bold-GBpc-EUC-H;
+    line-height: 50rpx;
+    color: #A279D7;
+    margin-top: 46rpx;
+}
+.head-right2 {
+    height: 200rpx;
+    width: 352rpx;
+    margin-left: -146rpx;
+}
+.details {
+    display: flex;
+    flex-direction: column;
+}
+.content {
+    width: 694rpx;
+    z-index: 2;
+    margin-top: -20rpx;
+    background-color: red;
+}
+
+.common-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -120rpx;
+    z-index: 2;
+}
+
+.common-item {
+    padding: 44rpx 20rpx;
+    width: 654rpx;
+    display: flex;
+    flex-direction: column;
+    /* background: #FFF0F4; */
+    margin-bottom: 40rpx;
+    border-radius:28rpx;
+
+}
+.common-top {
+    display: flex;
+    align-items: center;
+}
+
+.common-icon {
+    width: 72rpx;
+    height: 72rpx;
+    /* background-color: #FFC3C2; */
+    margin-left: 24rpx;
+}
+
+.common-name {
+    font-size: 18px;
+    font-family: SourceHanSansCN-Bold-GBpc-EUC-H;
+    line-height: 22px;
+    /* color: #FFC3C2; */
+    margin-left: 44rpx;
+}
+
+.common-bottom {
+    margin-top: 26rpx;
+    font-size: 13px;
+    font-family: SourceHanSansCN-Light-GBpc-EUC-H;
+    line-height: 24px;
+    color: #000000;
+    letter-spacing: 2rpx;
+    margin-left: 20rpx;
+}

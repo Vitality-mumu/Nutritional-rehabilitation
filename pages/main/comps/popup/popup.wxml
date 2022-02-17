@@ -1,0 +1,22 @@
+<view class="popup" wx:if="{{popupStatus}}">
+    <main-slot>
+        <view class="dialog">
+            <image class="error" src="https://bayajk.com/assets/img/y-error.png" bind:tap="onCloseClick" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
+            <view class="dialog-txt" >*请输入准确的身高体重，以生成营养报告</view>
+            <view class="input-view">
+                <view class="label">身高</view>
+                <input type="text"  type="digit"  bindinput="onHeightClick"/>
+                <view class="company">cm</view>
+            </view>
+            <view class="input-view">
+                 <view class="label">体重</view>
+                <input type="text"   type="digit"  bindinput="onWeightClick"/>
+                  <view class="company">kg</view>
+            </view>
+            <view class="btn" bind:tap="onConfirmClick">
+                确定
+                <!-- <image class="txtimg" src="https://bayajk.com/assets/img/y-confirm.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image> -->
+            </view>
+        </view>
+    </main-slot>
+</view>

@@ -1,0 +1,87 @@
+<view class="report">
+  <view class="report-content">
+    <nav-bar class="navBar" page-name="报告结论" color="black" background-color="{{status?'linear-gradient(225deg,#FDF9FB 0%,#F0E3FF 100%)':''}}"></nav-bar>
+    <main-slot background-color="linear-gradient(225deg,#FDF9FB 0%,#F0E3FF 100%)" radius="true" wx:if="{{report}}">
+      <view class="aver">
+        <image class="averimg" src="{{userinfo.avatarUrl}}"></image>
+        <image class="sex" src="https://bayajk.com/assets/img/y-gril.png" wx:if="{{report.user.gender=='女'}}"></image>
+        <image class="sex boy" src="https://bayajk.com/assets/img/y-boy.png" wx:if="{{report.user.gender=='男'}}"></image>
+      </view>
+      <view class="name">Hi {{userinfo.name}}</view>
+      <view class="information">
+        <view class="information-item">
+          <image class="infoimg" src="https://bayajk.com/assets/img/y-height.png"></image>
+          <view class="infotxt">{{userinfo.height || '-'}}cm</view>
+        </view>
+        <view class="information-item">
+          <image class="infoimg" src="https://bayajk.com/assets/img/y-weight.png"></image>
+          <view class="infotxt">{{userinfo.weight || '-'}}kg</view>
+        </view>
+        <view class="information-item">
+          <image class="infoimg" src="https://bayajk.com/assets/img/y-age.png"></image>
+          <view class="infotxt">{{report.user.age || '-'}}岁</view>
+        </view>
+      </view>
+      <!-- 卡片 -->
+      <view class="card">
+        <view class="card-score">
+          <view class="score-title">您的营养均衡评分</view>
+          <view class="score-img">{{report.grade.point}}</view>
+          <view class="score-res {{report.grade.point<60?'red':''|| report.grade.point>=60&& report.grade.point<=80?'orange':'' || report.grade.point>80?'green':''}}">{{report.grade.text}}</view>
+        </view>
+      </view>
+    </main-slot>
+    <view class="result" wx:if="{{report}}">
+      <!-- 对比 -->
+      <view class="contrastTip" wx:if="{{report.contrast!=0}}">
+        <view class="contrastTip-txt">与上次报告相比您的营养均衡评分</view>
+        <image class="contrastTip-img" src="https://bayajk.com/assets/img/y-arrow.png" wx:if="{{report.contrast==1}}"></image>
+        <image class="contrastTip-img " src="https://bayajk.com/assets/img/y-down.png" wx:if="{{report.contrast==2}}"></image>
+      </view>
+      <!-- 维生素 -->
+      <view class="vitamin">
+        <image class="vitaminimg" src="https://bayajk.com/assets/img/y-vitamin.png"></image>
+        <view class="vitamintxt">维生素/矿物质达标情况：</view>
+      </view>
+      <!-- 已达标维生素/矿物质： -->
+      <view class="common-title" wx:if="{{report.achieved.length!=0}}">已达标维生素:</view>
+      <view class="good-vitamin">
+        <block wx:for="{{report.achieved}}" wx:key="index">
+          <view class="achieved-item">
+            <image class="goodimg" src="{{item.img}}"></image>
+            <view class="">{{item.name}}</view>
+          </view>
+        </block>
+      </view>
+      <!-- 未达标维生素/矿物质： -->
+      <view class="common-title" wx:if="{{report.unachieved.length!=0}}">未达标维生素:</view>
+      <view class="vitamin-item" wx:for="{{report.unachieved}}" wx:key="index">
+        <view class="vitamin-top">
+          <image class="vitamin-icon" src="{{item.img}}"></image>
+          <view class="vitamin-title" style="color:{{item.color}}">{{item.name}}</view>
+          <view class="vitamin-progress">
+            <view class="vitamin-bar" style="background:{{item.color}};width:{{item.point+'%'}}"></view>
+          </view>
+          <view class="vitamin-score">有待提高</view>
+        </view>
+        <view class="vitamin-txt" >{{item.text}}</view>
+      </view>
+      <!-- 膳食建议 -->
+      <view class="dietary" wx:if="{{report.userFood.length!=0}}">
+        <view class="dietary-title">
+          <image class="dietaryImg" src="https://bayajk.com/assets/img/y-dietary-fiber.png"></image>
+          <view class="dietartxt">膳食建议：</view>
+        </view>
+        <view class="dietary-item" wx:for="{{report.userFood}}" wx:key="index">
+          <image class="dietary-icon" src="{{item.img}}"></image>
+          <view class="dietary-desc">{{item.dbName}}({{item.diary}}):{{item.content}}</view>
+        </view>
+      </view>
+      <!-- tip -->
+      <view class="tip">
+        <image class="tip-icon" src="https://bayajk.com/assets/img/y-bulb.png"></image>
+        <view class="tiptxt">建议您一周内再次检测</view>
+      </view>
+    </view>
+  </view>
+</view>

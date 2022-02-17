@@ -1,0 +1,13 @@
+<view class="main-wrap">
+  <view class="main-content" style="padding-bottom: {{tabbarHeight}}px;">
+    <foods wx:if="{{tabbarActive == 0}}" food="{{foodRecommend}}"/>
+    <element wx:if="{{tabbarActive == 1}}" vitamin="{{element.vitamin}}" mineral="{{element.mineral}}" />
+    <view class="block" hidden="{{tabbarActive != 2}}">
+      <report  reportStatus="{{reportStatus}}"  id="report"/>
+    </view>
+  </view>
+  <view class="tabbar">
+    <tabbar newReport="{{newReport}}" tabbarActive="{{tabbarActive}}" tabbarList="{{tabbarList}}" bindchangeTab="changeTab" />
+  </view>
+    <y-popup id="popup" bind:close="onClose"></y-popup>
+</view>

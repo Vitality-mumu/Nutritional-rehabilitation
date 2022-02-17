@@ -1,0 +1,31 @@
+<view class="details" wx:if="{{type}}">
+    <nav-bar class="navBar" page-name="{{title}}" show-back="true" color="black" background-color="{{status?'linear-gradient(225deg,#FDF9FB 0%,#F0E3FF 100%)':''}}"></nav-bar>
+    <main-slot background-color="linear-gradient(220deg, #FDF9FB 0%, #F0E3FF 100%)" radius="true">
+        <!-- 推荐食材 -->
+        <view class="head" wx:if="{{type=='food'}}">
+            <view class="head-left">
+                <view class="txt1">Recommended
+                        ingredients</view>
+                <view class="txt2">各类食材按需求高低依次排列</view>
+            </view>
+            <image class="head-right" src="https://bayajk.com/assets/img/y-foodPageLogo.png"></image>
+        </view>
+        <!-- 推荐维生素矿物质 -->
+        <view class="head" wx:if="{{type=='vitamins'}}">
+            <view class="txt3">Introduction to 
+                vitamins and minerals</view>
+            <image class="head-right2" src="https://bayajk.com/assets/img/y-vitaminPageLogo.png"></image>
+        </view>
+    </main-slot>
+    <!-- 主要内容 -->
+    <view class="common-content" wx:if="{{list}}">
+        <view class="common-item" wx:for="{{list}}" style="background:{{item.bgColor}}" wx:key="key">
+            <view class="common-top">
+                <image class="common-icon" src="{{item.img}}"></image>
+                <view class="common-name" src="" style="color:{{item.color}}">{{item.name}}</view>
+            </view>
+            <view class="common-bottom">{{item.content}}</view>
+        </view>
+    </view>
+
+</view>

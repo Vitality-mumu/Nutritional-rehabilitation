@@ -1,0 +1,25 @@
+{
+  "entryPagePath": "pages/main/index",
+  "pages": ["pages/main/index", "pages/login/login", "pages/webview/index"],
+  "subpackages": [
+    {
+      "root": "pages/subpackages/system",
+      "pages": [
+        "pages/detail-page/detail-page"
+      ]
+    }
+  ],
+
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "万贝营养",
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "custom"
+  },
+  "usingComponents": {
+    "nav-bar": "/component/navbar/NavBar",
+    "main-slot": "/component/mainSlot/mainSlot"
+  },
+  "sitemapLocation": "sitemap.json"
+}

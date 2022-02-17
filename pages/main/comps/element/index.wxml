@@ -1,0 +1,20 @@
+
+<van-config-provider theme-vars="{{ themeVars }}">
+  <view class="page-wrap" style="padding-top: {{navBarHeight + 20}}px;">
+    <nav-bar show-back="{{backstatus}}" page-name="{{title}}"></nav-bar>
+
+    <view class="vita-container">
+      <ec-canvas id="vitamin" canvas-id="vitamin-canvas" ec="{{ vitaCanvas }}"></ec-canvas>
+    </view>
+    <view class="mineral-container">
+      <ec-canvas id="mineral" canvas-id="mineral-canvas" ec="{{ mineralCanvas }}"></ec-canvas>
+    </view>
+
+    <view class="btn-wrap">
+      <van-button
+        color="#A279D7" block round
+        bind:click="linkTo"
+      >维生素矿物质介绍</van-button>
+    </view>
+  </view>
+</van-config-provider>

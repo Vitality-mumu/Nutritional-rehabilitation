@@ -1,0 +1,19 @@
+
+<van-config-provider theme-vars="{{ themeVars }}">
+  <nav-bar show-back="{{backstatus}}" page-name="{{title}}"></nav-bar>
+  <view class="food page-banner-bg" style="padding-top: {{navBarHeight}}px;">
+    <view class="text">适应性食物推荐</view>
+    <view class="food-banner"></view>
+  </view>
+
+  <view class="canvas-container">
+    <ec-canvas id="mychart-dom-pie" canvas-id="mychart-pie" ec="{{ foodCanvas }}"></ec-canvas>
+  </view>
+
+  <view class="btn-wrap">
+    <van-button
+      color="#A279D7" block round
+      bind:click="linkTo"
+    >推荐食材</van-button>
+  </view>
+</van-config-provider>

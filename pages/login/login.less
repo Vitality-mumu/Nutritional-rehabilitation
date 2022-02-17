@@ -1,0 +1,171 @@
+@import url('../../less.less');
+.home-content{
+  background: linear-gradient(201deg, #FDF9FB 1%, #F0E3FF);
+  // background: #161936;
+  /* background-image: url('https://wanbei.site/assets/img/heart/bgc2.png');
+  background-size: cover;
+  background-repeat: repeat; */
+}
+.login-content {
+  padding: 28rpx;
+  display: flex;
+}
+.logo{
+  padding-top: 8vh;
+  text-align: center;
+  color: #A279D7;
+  font-size: 36rpx;
+  margin-bottom: 40rpx;
+}
+.logo-byjk{
+  width: 188rpx;
+  height: 188rpx;
+}
+
+.login-item {
+  margin-bottom: 46rpx;
+  width: 580rpx;
+  height: 76rpx;
+  position: relative;
+  display: flex;
+  position: relative;
+  align-items: center;
+  // color: #A279D7;
+  border-radius: 10rpx;
+}
+
+.btn {
+  width: 562rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  margin-top: 154rpx;
+  background: #A279D7;
+  color: #fff;
+  font-size: 32rpx;
+  border-radius: 100rpx;
+}
+.btn-disable{
+  color: #fff;
+  background-color: #C8ACFC;
+}
+.privacy-file{
+  width: 100%;
+  text-align: left;
+  color: #A279D7;
+  font-size: 24rpx;
+  box-sizing: border-box;
+}
+.privacy-file .privacy{
+  display: inline-block;
+  vertical-align: 2rpx;
+  padding: 0rpx 0 20rpx 20rpx;
+  .icon{
+    width: 26rpx;
+    height: 26rpx;
+    border: 2rpx solid #A279D7;
+    box-sizing: border-box;
+    border-radius: 100%;
+    margin-right: 10rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &::before{
+      display: inline-block;
+      content: '';
+      border:6rpx solid rgba(0,0,0,0);
+      border-radius: 100%;
+      height: 0;
+      width: 0;
+    }
+  }
+}
+
+.privacy-file .privacy-checked{
+  .icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &::before{
+      display: inline-block;
+      content: '';
+      border:6rpx solid #A279D7;
+      border-radius: 100%;
+      height: 0;
+      width: 0;
+    }
+  }
+}
+.privacy-file navigator{
+  display: inline;
+}
+input {
+  color: white;
+  margin-left: 30rpx;
+  font-size: 14px;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  line-height: 24px;
+  width: 100%;
+}
+
+.code {
+  font-size: 14px;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  line-height: 24px;
+  color: #FFFFFF;
+  z-index: 2;
+  position: absolute;
+  right: 50rpx;
+}
+
+view .van-hairline--top-bottom:after{
+  border: none;
+}
+view .van-hairline--top-bottom{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+view .van-cell{
+  width: 580rpx;
+  height: 76rpx;
+  border-radius: 8rpx;
+  padding: 0 20rpx;
+}
+
+view .van-field__input {
+  color: white;
+  width:343rpx;
+}
+view .van-button--default {
+
+  background-color: rgb(0, 0, 0,0);
+  border: none;
+  color: white;
+  margin-left: 164rpx;
+}
+view .van-field__body{
+  width: 100%;
+}
+
+view  .van-field__error-message {
+  font-size: 10px;
+  position: absolute;
+  font-size: 12px;
+  color: #f44;
+  text-align: left;
+  bottom: -46rpx;
+
+}
+button{
+  position: absolute;
+}
+view .input-class{
+  color: #A279D7;
+  width: 580rpx;
+  height: 76rpx;
+}
+

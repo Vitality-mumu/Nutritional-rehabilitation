@@ -1,0 +1,51 @@
+.nav{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 750rpx;
+  color: #000;
+  /* color: rgb(247, 247, 247); */
+  z-index: 10;
+  /* background-color: #131934; */
+  /* background-image: url('https://wanbei.site/assets/img/heart/navbgc.png'); */
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: bottom;
+  display: flex;
+  align-items: flex-end;
+  box-sizing: border-box;
+}
+.back{
+  padding: 26rpx 40rpx;
+  position: absolute;
+  bottom: 0;
+}
+.backimg{
+  width: 22rpx;
+  height: 38rpx;
+  
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+.white{
+  background-image: url('https://wanbei.site/assets/img/wechat/arrow-left@2x.png');
+}
+.black{
+  width:38rpx;
+  height:38rpx;
+  background-image: url('https://wanbei.site/assets/img/wechat/blach-back.png');
+}
+.black-color{
+  color:black
+}
+.title{
+  margin: 0 auto 20rpx;
+  width: 46%;
+  text-align: center;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 40rpx;
+  font-weight: bold;
+}
+

@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "van-config-provider": "@vant/weapp/config-provider/index",
+    "van-button": "@vant/weapp/button/index",
+    "ec-canvas": "../../../../component/ec-canvas/ec-canvas"
+
+  }
+}

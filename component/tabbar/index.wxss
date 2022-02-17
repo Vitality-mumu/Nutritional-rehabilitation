@@ -1,0 +1,15 @@
+/* pages/main/index.wxss */
+.tip-bubble{
+  position: absolute;
+  top: -80rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 180rpx;
+  height: 72rpx;
+  color: #fff;
+  font-size: 24rpx;
+  text-align: center;
+  line-height: 50rpx;
+  background: url('https://wanbei.site/assets/img/wechat/tip-bubble@2x.png') no-repeat;
+  background-size: 100% auto;
+}

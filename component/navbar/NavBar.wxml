@@ -1,0 +1,7 @@
+<view class="nav" style=" height:{{navBarHeight}}px; background:{{backgroundColor}};color:{{color}}">
+  <!-- 标题 -->
+  <view class="back" wx:if="{{showBack}}" bindtap="onBackClick">
+    <view class="backimg black"></view>
+  </view>
+  <view class="title {{ backgroundColor!='#fff'?'':'black-color' }}" >{{pageName}}</view>
+</view>

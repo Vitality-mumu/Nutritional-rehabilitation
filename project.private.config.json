@@ -1,0 +1,36 @@
+{
+    "setting": {},
+    "condition": {
+        "plugin": {
+            "list": []
+        },
+        "game": {
+            "list": []
+        },
+        "gamePlugin": {
+            "list": []
+        },
+        "miniprogram": {
+            "list": [
+                {
+                    "name": "main",
+                    "pathName": "pages/main/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "webview",
+                    "pathName": "pages/webview/index",
+                    "query": "navBgColor=#0A2962&navColor=#ffffff&src=http%3A%2F%2Flocalhost%3A8081%2F%23%2Fheart%3Fsession%3Dkd339Mz9jHjOfc6qXYeGHwujBvtHtOpQ%252FUS4mK%252B1YK4mT%252B3sBkJQ8Sg365ZxqlSwTArMsPnGmWOW%252FLMDd2%252B80PFQQrngRyDqw1MVprFU%252FtxfTZqlG8uLXQ%253D%253D",
+                    "scene": null
+                },
+                {
+                    "name": "登录",
+                    "pathName": "pages/login/login",
+                    "query": "",
+                    "scene": null
+                }
+            ]
+        }
+    }
+}

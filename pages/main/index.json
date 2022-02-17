@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "tabbar": "/component/tabbar",
+    "foods": "./comps/foods",
+    "element": "./comps/element",
+    "report":"./comps/report",
+    "y-popup":"./comps/popup/popup"
+  }
+}
